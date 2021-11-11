@@ -17,6 +17,7 @@ h6 {
 /* ul {margin: 0; padding: 0;}   уже указано */
 img {
   display: block;
+  margin: 0;
 }
 
 .container {
@@ -126,6 +127,7 @@ a.active {
   background-color: #2f303a;
   text-align: center;
 }
+
 .hero-title {
   width: 696px;
   margin: 0 auto;
@@ -170,18 +172,42 @@ a.active {
 }
 
 /* <!-- Перечень особенностей --> */
+.features-container {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .features-list {
+  display: flex;
+}
+
+.features-list li:not(:last-child) {
+  margin-right: 30px;
+}
+.features-list-title {
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--black);
 }
 
-.features-item {
+.features-list-item {
   font-size: 14px;
   line-height: 1.7;
 }
 /* <!--  Чем мы занимаемся  --> */
+.box .container {
+  padding-bottom: 94px;
+}
+
+.box-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
 .box-title,
 .team-title {
   font-size: 36px;
@@ -190,13 +216,33 @@ a.active {
   color: var(--black);
 }
 
+.team-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
 .team {
   background-color: #f5f4fa;
 }
 .team-card {
   background-color: var(--white);
+  margin-right: 30px;
+  padding-bottom: 30px;
 }
+.team-card:nth-child(4n) {
+  margin-right: 0;
+}
+
 .team-card h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -211,12 +257,25 @@ a.active {
 }
 
 /* ------------------------------------Футер ------------------------------------ */
+
 .footer {
   background-color: #2f303a;
   color: var(--white);
 }
+
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer .logo {
+  display: block;
+  margin-bottom: 20px;
   color: var(--white);
+}
+
+.footer-list-item {
+  margin-bottom: 9px;
 }
 
 /* Address не наследует font-style по умолчанию */
