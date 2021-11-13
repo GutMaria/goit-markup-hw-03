@@ -46,6 +46,9 @@ ul {
 }
 
 /* --------------------------------HEADER--------------------------------- */
+header {
+  border-bottom: 1px solid #ececec;
+}
 
 .header-container {
   display: flex;
@@ -126,6 +129,8 @@ a.active {
 .hero {
   background-color: #2f303a;
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -172,10 +177,14 @@ a.active {
 }
 
 /* <!-- Перечень особенностей --> */
-.features-container {
-  display: flex;
+
+.features {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+.features-container {
+  display: flex;
 }
 
 .features-list {
@@ -198,14 +207,17 @@ a.active {
   line-height: 1.7;
 }
 /* <!--  Чем мы занимаемся  --> */
-.box .container {
+.box {
   padding-bottom: 94px;
 }
 
 .box-list {
   display: flex;
-  justify-content: space-between;
   margin-top: 50px;
+}
+
+.box-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .box-title,
@@ -216,9 +228,10 @@ a.active {
   color: var(--black);
 }
 
-.team-container {
+.team {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: #f5f4fa;
 }
 
 .team-list {
@@ -227,9 +240,6 @@ a.active {
   margin-top: 50px;
 }
 
-.team {
-  background-color: #f5f4fa;
-}
 .team-card {
   background-color: var(--white);
   margin-right: 30px;
@@ -259,13 +269,11 @@ a.active {
 /* ------------------------------------Футер ------------------------------------ */
 
 .footer {
-  background-color: #2f303a;
-  color: var(--white);
-}
-
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: #2f303a;
+  color: var(--white);
 }
 
 .footer .logo {
@@ -274,7 +282,7 @@ a.active {
   color: var(--white);
 }
 
-.footer-list-item {
+.footer-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
